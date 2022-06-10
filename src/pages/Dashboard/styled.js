@@ -12,21 +12,18 @@ export const Titulo_filtro = styled.div`
 
 
 export const Titulo = styled.div`
-    margin-top:34px ;
+    margin-top: 34px;
     h1{
-        font-weight: bold;
+        font-weight: 700;
+        color:#5D405C;
         font-size: 28px;
-        color: #5d405c;
-
     }
-
     h4{
-        font-size: 14px;
-        font-weight: 500;
         margin-top: 3px;
+        font-size: 14px;
         color: #828282;
+        font-weight: 500;
     }
-
 `;
 
 export const Filtro = styled.div`
