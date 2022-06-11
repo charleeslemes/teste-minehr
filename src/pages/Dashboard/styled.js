@@ -52,11 +52,11 @@ export const Filtro = styled.div`
 
 export const ContainerGraficos = styled.div`
     width: 100%;
-
+    border-radius: 10px;
     max-width: 1300px;
-    margin: 0 auto;
+    margin: 50px auto 0 auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 
 `;

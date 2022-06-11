@@ -20,7 +20,9 @@ export default function GraphBar(){
             chart: {
               type: 'bar',
               height: 350,
-              widtd: '100%'
+              widtd: '100%',
+              fontFamily: 'Montserrat, sans-serif',
+              
             },
             plotOptions: {
               bar: {
@@ -40,14 +42,13 @@ export default function GraphBar(){
             title: {
                 text:'Barras',
                 align: 'left',
-                margin: 10,
-                offsetX: 50,
-                offsetY: 0,
+                margin: 0,
+                offsetX: 0,
+                offsetY: -3,
                 floating: true,
                 style: {
                   fontSize:  '16px',
                   fontWeight:  'bold',
-                  fontFamily: 'Montserrat sans-serif' ,
                   color:  '#5D405C'
                 },
         
