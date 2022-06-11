@@ -1,4 +1,4 @@
-import {Titulo_filtro,Titulo,Filtro} from './styled';
+import {Titulo_filtro,Titulo,Filtro, ContainerGraficos,BoxBar,BoxScatter} from './styled';
 import Header from '../../components/Header';
 import {FaFilter} from 'react-icons/fa';
 import GraphBar from '../../components/GraphBar';
@@ -22,7 +22,18 @@ export default function Dashboard(){
 
             </Titulo_filtro>
 
-            <GraphBar/>
+            <ContainerGraficos>
+                <BoxBar>
+                <GraphBar/>
+                </BoxBar>
+
+                <BoxScatter>
+                    <h1>scatter</h1>
+                </BoxScatter>
+            
+            </ContainerGraficos>
+
+           
 
         </>
     )

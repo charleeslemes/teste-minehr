@@ -48,3 +48,25 @@ export const Filtro = styled.div`
     }
 
 `;
+
+
+export const ContainerGraficos = styled.div`
+    width: 100%;
+
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+`;
+
+export const BoxBar = styled.div`
+  padding: 20px;
+    width: 50%;
+    box-shadow: 0 0 20px #0000001A;
+`;
+
+export const BoxScatter = styled.div`
+    width: 50%;
+`;
