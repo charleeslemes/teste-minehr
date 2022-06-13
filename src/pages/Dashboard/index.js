@@ -2,6 +2,8 @@ import {Titulo_filtro,Titulo,Filtro, ContainerGraficos,BoxBar,BoxScatter} from '
 import Header from '../../components/Header';
 import {FaFilter} from 'react-icons/fa';
 import GraphBar from '../../components/GraphBar';
+import GraphicScatter from '../../components/GraphScatter';
+
 
 export default function Dashboard(){
     return(
@@ -28,7 +30,7 @@ export default function Dashboard(){
                 </BoxBar>
 
                 <BoxScatter>
-                    <h1>scatter</h1>
+                    <GraphicScatter/>
                 </BoxScatter>
             
             </ContainerGraficos>

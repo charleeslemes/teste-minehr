@@ -62,11 +62,15 @@ export const ContainerGraficos = styled.div`
 `;
 
 export const BoxBar = styled.div`
-  padding: 20px;
+    margin: 10px;
+    padding: 20px;
     width: 50%;
     box-shadow: 0 0 20px #0000001A;
 `;
 
 export const BoxScatter = styled.div`
+    margin: 10px;
+    padding: 20px;
     width: 50%;
+    box-shadow: 0 0 20px #0000001A;
 `;
