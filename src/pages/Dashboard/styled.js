@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 
 export const Titulo_filtro = styled.div`
+    padding: 0 3%;
     width: 100%;
     align-items: center;
     display: flex;
@@ -54,23 +55,38 @@ export const ContainerGraficos = styled.div`
     width: 100%;
     border-radius: 10px;
     max-width: 1300px;
+    position: relative;
     margin: 50px auto 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+
+    @media screen and (max-width: 1200px){
+        flex-direction: column;
+    }
 
 `;
 
 export const BoxBar = styled.div`
     margin: 10px;
     padding: 20px;
-    width: 680px;
+    width: 50%;
     box-shadow: 0 0 20px #0000001A;
+    @media screen and (max-width: 1200px){
+        width: 90%;
+        margin: 10px auto;
+    }
 `;
 
 export const BoxScatter = styled.div`
     margin: 10px;
     padding: 20px;
-    width: 680px;
+    width: 50%;
     box-shadow: 0 0 20px #0000001A;
+
+    @media screen and (max-width: 1200px){
+        width: 90%;
+        margin: 10px auto;
+    }
 `;

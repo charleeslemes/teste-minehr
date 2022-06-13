@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './style.css';
 import ApexCharts from 'react-apexcharts';
 import menu from '../../assets/menu.svg';
 import info from '../../assets/info.svg';
@@ -35,16 +34,16 @@ export default function GraphBar(){
               pan:true,
               reset:true,
               customIcons: [{
-                icon: `<img src=${info}>`,
+                icon: `<img src=${info}  width="20px" alt="Gráfico Scatter"> `,
                 title: 'Gráfico Scatter',
-                index:-50,
-                class: 'custom-info',
+                index:-1,
+                class: 'custom-icon custom-info',
                 click: function (chart, options, e) {}
             }]
             },
             export: {
               csv: {
-                filename: undefined,
+                filename: 'GráficoBarras',
                 columnDelimiter: ',',
                 headerCategory: 'category',
                 headerValue: 'value',
@@ -53,10 +52,10 @@ export default function GraphBar(){
                 }
               },
               svg: {
-                filename: undefined,
+                filename:'GráficoBarras',
               },
               png: {
-                filename: undefined,
+                filename: 'GráficoBarras',
               }
             },
             autoSelected: 'zoom' 

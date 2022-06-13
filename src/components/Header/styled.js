@@ -6,4 +6,5 @@ export const Content_header = styled.div`
     height: 91px;
     background-color: #cec6ce;
 
+
 `;

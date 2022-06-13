@@ -2,7 +2,7 @@ import { useState } from 'react';
 import ApexCharts from 'react-apexcharts';
 import menu from '../../assets/menu.svg';
 import info from '../../assets/info.svg';
-import '../GraphBar/style.css';
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 </style>
@@ -31,27 +31,24 @@ export default function GraphicScatter(){
               width:'100%',
               type: 'scatter',
               fontFamily: 'Montserrat, sans-serif',
-              zoom: false,
-
-
+              zoom: false,  
 
               toolbar: {
-                show: true,
-                offsetX: 0,
-                offsetY: 0,
+                offsetX: -20,
+                offsetY: -7,
                 tools: {
                   download:`<img src=${menu}>`,
                   customIcons: [{
-                    icon: `<img src=${info}>`,
+                    icon: `<img src=${info}  width="20px" alt="Gráfico Scatter"> `,
                     title: 'Gráfico Scatter',
-                    class: 'custom-info',
-                    index:-50,
+                    class: 'custom-icon',
+                    index:-1,
                     click: function (chart, options, e) {}
                 }]
                 },
                 export: {
                   csv: {
-                    filename: undefined,
+                    filename: 'gráficoScatter',
                     columnDelimiter: ',',
                     headerCategory: 'category',
                     headerValue: 'value',
@@ -60,10 +57,10 @@ export default function GraphicScatter(){
                     }
                   },
                   svg: {
-                    filename: undefined,
+                    filename: 'gráficoScatter',
                   },
                   png: {
-                    filename: undefined,
+                    filename: 'gráficoScatter',
                   }
                 },
                 autoSelected: 'zoom' 
@@ -88,7 +85,7 @@ export default function GraphicScatter(){
                 margin: 10,
                 offsetX: 0,
                 offsetY: -7,
-                floating: true,
+                floating: false,
                 style: {
                   fontSize:  '16px',
                   fontWeight:  'bold',
