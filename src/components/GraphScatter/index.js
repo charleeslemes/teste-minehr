@@ -2,6 +2,7 @@ import { useState } from 'react';
 import ApexCharts from 'react-apexcharts';
 import menu from '../../assets/menu.svg';
 import info from '../../assets/info.svg';
+import '../GraphBar/style.css';
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 </style>
@@ -32,19 +33,21 @@ export default function GraphicScatter(){
               fontFamily: 'Montserrat, sans-serif',
               zoom: false,
 
+
+
               toolbar: {
                 show: true,
                 offsetX: 0,
                 offsetY: 0,
                 tools: {
-                  download:true |`<img src={${menu}}>`,
-                  selection: true,
-                  zoom: true,
-                  zoomin: true,
-                  zoomout: true,
-                  pan:true,
-                  reset:true,
-                  customIcons: []
+                  download:`<img src=${menu}>`,
+                  customIcons: [{
+                    icon: `<img src=${info}>`,
+                    title: 'Gráfico Scatter',
+                    class: 'custom-info',
+                    index:-50,
+                    click: function (chart, options, e) {}
+                }]
                 },
                 export: {
                   csv: {
@@ -92,6 +95,7 @@ export default function GraphicScatter(){
                   color:  '#5D405C'
                 },
             },
+
           },
     
     })
