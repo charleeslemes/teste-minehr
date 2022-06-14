@@ -57,6 +57,7 @@ export const ContainerGraficos = styled.div`
     border-radius: 10px;
     max-width: 1300px;
     position: relative;
+    padding: 0 2%;
     margin: 50px auto 0 auto;
     display: flex;
     justify-content: space-between;
@@ -65,31 +66,9 @@ export const ContainerGraficos = styled.div`
 
     @media screen and (max-width: 1000px){
         flex-direction: column;
+        overflow: hidden;
     }
 
-`;
-
-export const BoxBar = styled.div`
-   // margin: 10px;
-    //padding: 20px;
-    //width: 50%;
-    //box-shadow: 0 0 20px #0000001A;
-    //@media screen and (max-width: 1000px){
-     //   width: 90%;
-    //    margin: 10px auto;
-    //}
-`;
-
-export const BoxScatter = styled.div`
-  //  margin: 10px;
-  //  padding: 20px;
-   // width: 50%;
-  //  box-shadow: 0 0 20px #0000001A;
-
- //   @media screen and (max-width: 1000px){
-    //    width: 90%;
-   //     margin: 10px auto;
-   // }
 `;
 
 

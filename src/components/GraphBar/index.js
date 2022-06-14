@@ -97,29 +97,26 @@ export default function GraphBar(props){
     function filtro(){
       if(props.filtro === 'all'){
         return(
-          <>
           <Container>
-          <ApexCharts
+            <ApexCharts
               options={GraphicBar.options} 
               series={GraphicBar.series} 
               type="bar"  
             />
-            </Container>
-          </>
+          </Container>
+
         )
       }
 
       else if(props.filtro === 'barras'){
         return(
-          <>
             <Container>
-          <ApexCharts
-              options={GraphicBar.options} 
-              series={GraphicBar.series} 
-              type="bar"  
-            />
+              <ApexCharts
+                options={GraphicBar.options} 
+                series={GraphicBar.series} 
+                type="bar"  
+              />
             </Container>
-          </>
         )
       }
 
@@ -129,13 +126,9 @@ export default function GraphBar(props){
 
     }
 
-   
-
     return(
         <>
-
           {filtro()}
-
         </>
     )
 }

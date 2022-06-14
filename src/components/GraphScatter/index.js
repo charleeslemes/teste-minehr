@@ -4,13 +4,9 @@ import menu from '../../assets/menu.svg';
 import info from '../../assets/info.svg';
 import '../GraphBar/style.css';
 import { Container } from './styled';
-
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 </style>
-
-
-
 export default function GraphicScatter(props){
 
     const [graphScatter, setGraphScatter] = useState({
@@ -108,44 +104,39 @@ export default function GraphicScatter(props){
 
       if(props.filtro === 'all'){
         return(
-          <>
-
           <Container>
-        <ApexCharts options={graphScatter.options} 
-        series={graphScatter.series}
-        type="scatter" 
-        />
-        </Container>
-          </>
+            <ApexCharts
+              options={graphScatter.options} 
+              series={graphScatter.series}
+              type="scatter" 
+            />
+          </Container>
+
         )
       }
 
       else if(props.filtro === 'scatter'){
         return(
-          <>
-         <Container>
-        <ApexCharts options={graphScatter.options} 
-        series={graphScatter.series}
-        type="scatter" 
-        />
-        </Container>
-          </>
+          <Container>
+            <ApexCharts 
+              options={graphScatter.options} 
+              series={graphScatter.series}
+              type="scatter" 
+            />
+          </Container>
+
         )
       }
 
       else if (props.filtro === 'barras'){
         return;
       }
-    
    
     }
 
-
     return(
       <>
-
       {filtro()}
-
       </>
     )
 }

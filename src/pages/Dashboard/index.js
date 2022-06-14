@@ -1,5 +1,4 @@
-import {Titulo_filtro,Titulo,Filtro, ContainerGraficos,BoxBar,BoxScatter, Form} from './styled';
-import Header from '../../components/Header';
+import {Titulo_filtro,Titulo,Filtro, ContainerGraficos,Form} from './styled';
 import {FaFilter} from 'react-icons/fa';
 import GraphBar from '../../components/GraphBar';
 import GraphicScatter from '../../components/GraphScatter';
@@ -23,28 +22,19 @@ export default function Dashboard(props){
      }
     }
 
-    console.log(modal);
-
     return(
         <>
-        <Header/>
-
             <Titulo_filtro>
-
                 <Titulo>
                 <h1>Dashboard</h1>
                 <h4>Desafio Técnico Frontend</h4>
                 </Titulo>
-
                 <Filtro onClick={btnFiltrar}>
-                        <FaFilter/>
-                        <span>Filtrar</span>
-
+                    <FaFilter/>
+                    <span>Filtrar</span>
                 </Filtro>
-
                 {
                 modal?
-
                 <Form >
                     <select onChange={handleSelect}>
                         <option value="all" selected>Todos</option>
@@ -52,29 +42,17 @@ export default function Dashboard(props){
                         <option value="scatter">Scatter</option>
                     </select>
                 </Form>
-
                 :
-
                 <></>
  
             }
 
-
             </Titulo_filtro>
 
-      
-
-
-
             <ContainerGraficos>
-     
                 <GraphBar filtro={filtro}/>
                 <GraphicScatter filtro={filtro}/>
-          
-            
             </ContainerGraficos>
-
-           
 
         </>
     )
