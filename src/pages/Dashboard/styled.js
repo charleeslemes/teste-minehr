@@ -70,26 +70,26 @@ export const ContainerGraficos = styled.div`
 `;
 
 export const BoxBar = styled.div`
-    margin: 10px;
-    padding: 20px;
-    width: 50%;
-    box-shadow: 0 0 20px #0000001A;
-    @media screen and (max-width: 1000px){
-        width: 90%;
-        margin: 10px auto;
-    }
+   // margin: 10px;
+    //padding: 20px;
+    //width: 50%;
+    //box-shadow: 0 0 20px #0000001A;
+    //@media screen and (max-width: 1000px){
+     //   width: 90%;
+    //    margin: 10px auto;
+    //}
 `;
 
 export const BoxScatter = styled.div`
-    margin: 10px;
-    padding: 20px;
-    width: 50%;
-    box-shadow: 0 0 20px #0000001A;
+  //  margin: 10px;
+  //  padding: 20px;
+   // width: 50%;
+  //  box-shadow: 0 0 20px #0000001A;
 
-    @media screen and (max-width: 1000px){
-        width: 90%;
-        margin: 10px auto;
-    }
+ //   @media screen and (max-width: 1000px){
+    //    width: 90%;
+   //     margin: 10px auto;
+   // }
 `;
 
 

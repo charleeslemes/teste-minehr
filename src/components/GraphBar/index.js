@@ -3,6 +3,7 @@ import ApexCharts from 'react-apexcharts';
 import menu from '../../assets/menu.svg';
 import info from '../../assets/info.svg';
 import './style.css';
+import {Container} from './styled';
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
@@ -97,11 +98,13 @@ export default function GraphBar(props){
       if(props.filtro === 'all'){
         return(
           <>
+          <Container>
           <ApexCharts
               options={GraphicBar.options} 
               series={GraphicBar.series} 
               type="bar"  
             />
+            </Container>
           </>
         )
       }
@@ -109,11 +112,13 @@ export default function GraphBar(props){
       else if(props.filtro === 'barras'){
         return(
           <>
+            <Container>
           <ApexCharts
-            options={GraphicBar.options} 
-            series={GraphicBar.series} 
-            type="bar"  
+              options={GraphicBar.options} 
+              series={GraphicBar.series} 
+              type="bar"  
             />
+            </Container>
           </>
         )
       }

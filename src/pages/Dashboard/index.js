@@ -67,13 +67,10 @@ export default function Dashboard(props){
 
 
             <ContainerGraficos>
-                <BoxBar>
+     
                 <GraphBar filtro={filtro}/>
-                </BoxBar>
-
-                <BoxScatter>
-                    <GraphicScatter filtro={filtro}/>
-                </BoxScatter>
+                <GraphicScatter filtro={filtro}/>
+          
             
             </ContainerGraficos>
 
