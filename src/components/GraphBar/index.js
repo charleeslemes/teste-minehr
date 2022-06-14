@@ -2,13 +2,15 @@ import { useState } from 'react';
 import ApexCharts from 'react-apexcharts';
 import menu from '../../assets/menu.svg';
 import info from '../../assets/info.svg';
+import './style.css';
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 </style>
 
 
 
-export default function GraphBar(){
+export default function GraphBar(props){
 
     const [GraphicBar, setGraphicBar] = useState({series: [{
         data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380]
@@ -22,22 +24,15 @@ export default function GraphBar(){
           fontFamily: 'Montserrat, sans-serif',
 
           toolbar: {
-            show: true,
             offsetX: 0,
             offsetY: 0,
             tools: {
               download:`<img src=${menu}>`,
-              selection: true,
-              zoom: true,
-              zoomin: true,
-              zoomout: true,
-              pan:true,
-              reset:true,
               customIcons: [{
                 icon: `<img src=${info}  width="20px" alt="Gráfico Scatter"> `,
-                title: 'Gráfico Scatter',
-                index:-1,
-                class: 'custom-icon custom-info',
+                title: 'Gráfico Barras',
+                class: 'custom-info',
+                index: -1,
                 click: function (chart, options, e) {}
             }]
             },
@@ -98,17 +93,43 @@ export default function GraphBar(){
     
     })
 
+    function filtro(){
+      if(props.filtro === 'all'){
+        return(
+          <>
+          <ApexCharts
+              options={GraphicBar.options} 
+              series={GraphicBar.series} 
+              type="bar"  
+            />
+          </>
+        )
+      }
+
+      else if(props.filtro === 'barras'){
+        return(
+          <>
+          <ApexCharts
+            options={GraphicBar.options} 
+            series={GraphicBar.series} 
+            type="bar"  
+            />
+          </>
+        )
+      }
+
+      else if(props.filtro === 'scatter'){
+        return;
+      }
+
+    }
+
    
 
     return(
         <>
 
-        <ApexCharts
-         options={GraphicBar.options} 
-         series={GraphicBar.series} 
-         type="bar"  
-         height={350} 
-            />
+          {filtro()}
 
         </>
     )

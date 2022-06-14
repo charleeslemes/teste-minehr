@@ -9,6 +9,7 @@ export const Titulo_filtro = styled.div`
     max-width: 1200px;
     margin: 0 auto;
     justify-content: space-between;
+    position: relative;
 `;
 
 
@@ -62,7 +63,7 @@ export const ContainerGraficos = styled.div`
     align-items: center;
 
 
-    @media screen and (max-width: 1200px){
+    @media screen and (max-width: 1000px){
         flex-direction: column;
     }
 
@@ -73,7 +74,7 @@ export const BoxBar = styled.div`
     padding: 20px;
     width: 50%;
     box-shadow: 0 0 20px #0000001A;
-    @media screen and (max-width: 1200px){
+    @media screen and (max-width: 1000px){
         width: 90%;
         margin: 10px auto;
     }
@@ -85,8 +86,19 @@ export const BoxScatter = styled.div`
     width: 50%;
     box-shadow: 0 0 20px #0000001A;
 
-    @media screen and (max-width: 1200px){
+    @media screen and (max-width: 1000px){
         width: 90%;
         margin: 10px auto;
+    }
+`;
+
+
+export const Form = styled.form`
+    position: absolute;
+    bottom: 2%;
+    right: 5%;
+
+    @media screen and (max-width: 768px){
+        right: 5%;
     }
 `;

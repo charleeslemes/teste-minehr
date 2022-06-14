@@ -1,11 +1,30 @@
-import {Titulo_filtro,Titulo,Filtro, ContainerGraficos,BoxBar,BoxScatter} from './styled';
+import {Titulo_filtro,Titulo,Filtro, ContainerGraficos,BoxBar,BoxScatter, Form} from './styled';
 import Header from '../../components/Header';
 import {FaFilter} from 'react-icons/fa';
 import GraphBar from '../../components/GraphBar';
 import GraphicScatter from '../../components/GraphScatter';
+import { useState } from 'react';
 
 
-export default function Dashboard(){
+export default function Dashboard(props){
+ const [filtro, setFiltro] = useState('all');
+ const [modal, setModal] = useState(false);
+
+    function handleSelect(el){
+        setFiltro(el.target.value);
+    }
+
+    function btnFiltrar(){
+     if(modal){
+        setModal(false);
+     }
+     else{
+        setModal(true);
+     }
+    }
+
+    console.log(modal);
+
     return(
         <>
         <Header/>
@@ -17,20 +36,43 @@ export default function Dashboard(){
                 <h4>Desafio Técnico Frontend</h4>
                 </Titulo>
 
-                <Filtro>
+                <Filtro onClick={btnFiltrar}>
                         <FaFilter/>
                         <span>Filtrar</span>
+
                 </Filtro>
+
+                {
+                modal?
+
+                <Form >
+                    <select onChange={handleSelect}>
+                        <option value="all" selected>Todos</option>
+                        <option value="barras">Barras</option>
+                        <option value="scatter">Scatter</option>
+                    </select>
+                </Form>
+
+                :
+
+                <></>
+ 
+            }
+
 
             </Titulo_filtro>
 
+      
+
+
+
             <ContainerGraficos>
                 <BoxBar>
-                <GraphBar/>
+                <GraphBar filtro={filtro}/>
                 </BoxBar>
 
                 <BoxScatter>
-                    <GraphicScatter/>
+                    <GraphicScatter filtro={filtro}/>
                 </BoxScatter>
             
             </ContainerGraficos>

@@ -2,6 +2,8 @@ import { useState } from 'react';
 import ApexCharts from 'react-apexcharts';
 import menu from '../../assets/menu.svg';
 import info from '../../assets/info.svg';
+import '../GraphBar/style.css';
+import { Filtro } from '../../pages/Dashboard/styled';
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
@@ -9,7 +11,7 @@ import info from '../../assets/info.svg';
 
 
 
-export default function GraphicScatter(){
+export default function GraphicScatter(props){
 
     const [graphScatter, setGraphScatter] = useState({
         series: [{
@@ -31,7 +33,6 @@ export default function GraphicScatter(){
               width:'100%',
               type: 'scatter',
               fontFamily: 'Montserrat, sans-serif',
-              zoom: false,  
 
               toolbar: {
                 offsetX: -20,
@@ -39,10 +40,10 @@ export default function GraphicScatter(){
                 tools: {
                   download:`<img src=${menu}>`,
                   customIcons: [{
-                    icon: `<img src=${info}  width="20px" alt="Gráfico Scatter"> `,
+                    icon: `<img src=${info} width="20px" alt="Gráfico Scatter"> `,
                     title: 'Gráfico Scatter',
-                    class: 'custom-icon',
-                    index:-1,
+                    class: 'custom-info',
+                    index: -1,
                     click: function (chart, options, e) {}
                 }]
                 },
@@ -65,6 +66,10 @@ export default function GraphicScatter(){
                 },
                 autoSelected: 'zoom' 
               },
+
+              zoom:{
+                enabled: false,
+              }
 
             },
             xaxis: {
@@ -96,17 +101,46 @@ export default function GraphicScatter(){
           },
     
     })
+    
 
 
+    function filtro(){
+
+      if(props.filtro === 'all'){
+        return(
+          <>
+        <ApexCharts options={graphScatter.options} 
+        series={graphScatter.series}
+        type="scatter" 
+        />
+          </>
+        )
+      }
+
+      else if(props.filtro === 'scatter'){
+        return(
+          <>
+        <ApexCharts options={graphScatter.options} 
+        series={graphScatter.series}
+        type="scatter" 
+        />
+          </>
+        )
+      }
+
+      else if (props.filtro === 'barras'){
+        return;
+      }
+    
+   
+    }
 
 
     return(
-        <>
-             <ApexCharts options={graphScatter.options} 
-             series={graphScatter.series}
-              type="scatter" 
-              />
-              
-        </>
+      <>
+
+      {filtro()}
+
+      </>
     )
 }
