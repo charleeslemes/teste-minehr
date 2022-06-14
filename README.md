@@ -2,7 +2,7 @@ Teste técnico Fron-end usando React js e styled components
 
 Teste consistem em criar um dashboard com dois gráficos um de barras e outro scatter.
 
-Link do site:
+Link do site: https://testeminehr.netlify.app/
 
 Interface desktop
 
